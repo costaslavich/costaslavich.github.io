@@ -1,0 +1,51 @@
+html{
+    box-sizing: border-box;
+}    
+ *,
+ *::before,
+ *::after{
+   box-sizing: inherit;
+ }
+ body{
+   font-family: "PlayfairDisplay", "Times New Roman", serif;
+   font-weight: 400;
+   color: #626262;
+   font-size: 14px;
+   line-height: 24px;
+ }
+ .wrapper{
+padding-top: 44px;
+width: 900px;
+margin: 0 auto;
+ }  
+ .site-nav{
+margin: 0;
+padding: 0;
+list-style: none;
+text-align: center;
+ } 
+ .site-nav-item{
+   margin-right: 50px;
+   display: inline-block;
+ }
+ .site-nav-item li:last-child{
+margin-right: 0;
+ }
+ .site-nav a{
+   display: block;
+   color: #626262;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 14px;
+ }
+ .site-nav a:hover{
+   color: #762376;
+ }
+ .top-foto div{
+   display: inline-block;
+ }
+          
+         
+      
+
+
