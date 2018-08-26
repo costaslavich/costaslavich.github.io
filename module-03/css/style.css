@@ -1,0 +1,81 @@
+html{
+	box-sizing:border-box;
+}
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+body{
+  font-family: "Playfair Display", "Ubuntu", serif;
+  font-weight: 400px;
+  color: #626262;
+  font-size: 14px;
+  line-height: 24px;
+}
+.wrapper{
+  width: 960px;
+  margin:0 auto;
+  padding-top: 54px;
+  padding-bottom: 70px;
+}
+.page-top{
+  margin-bottom: 96px;
+}
+.site-nav{
+  list-style: none;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0px;
+}
+.site-nav a{
+  font-size: 14px;
+  color:#626262;
+  line-height: 24px;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.site-nav li{ 
+display:inline-block;
+margin-right: 77px;
+}
+.site-nav a:hover,
+.site-nav a:focus{
+  color:#03a9f4;
+}
+.section{
+  margin: 0;
+  padding: 0;
+}
+.section-item:nth-child(2n){
+  margin-right: 0px;
+}
+.section-item{
+  list-style: none;
+  width: 420px;
+  display: inline-block;
+  margin-bottom: 99px;
+}
+.section-item:not(:last-child){
+  margin-right: 55px;
+}
+.section-item-name{
+  line-height: 17px;
+  font-family: "Ubuntu";
+  color: #b4ad9e;
+  text-transform: uppercase;
+}
+.section-item-phrase{
+  font-size: 30px;
+  line-height: 36px;
+}
+.btn{
+  display: block;
+  margin: 0 356px;
+  font-family: serif;
+  width: 164px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 24px;
+}
