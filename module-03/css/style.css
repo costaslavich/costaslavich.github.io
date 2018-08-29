@@ -1,0 +1,109 @@
+html{
+	box-sizing:border-box;
+}
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+body{
+  margin: 0;
+  font-family: "Playfair Display", "Ubuntu", serif;
+  color: #626262;
+  font-size: 14px;
+  line-height: 24px;
+}
+.wrapper{
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 54px;
+  padding-bottom: 70px;
+}
+.page-top{
+  margin-bottom: 96px;
+}
+.site-nav{
+  list-style: none;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0px;
+}
+.site-nav a{
+  font-size: 14px;
+  color:#626262;
+  line-height: 24px;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.site-nav li{ 
+display:inline-block;
+margin-right: 77px;
+}
+.site-nav li:last-child{
+  margin-right: 0;
+}
+.site-nav a:hover,
+.site-nav a:focus{
+  color:#03a9f4;
+}
+.section{
+  font-size: 0px;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+}
+.section-item:nth-child(2n){
+  margin-right: 0px;
+}
+.section-item:nth-last-child(-n+2){
+  margin-bottom: 0;
+}
+.section-item{
+  font-size: 14px;
+  list-style: none;
+  width: 420px;
+  display: inline-block;
+  margin-right: 60px;
+  margin-bottom: 130px;
+}
+.section-item-name{
+  margin: 0;
+  line-height: 17px;
+  font-family: "Ubuntu";
+  color: #b4ad9e;
+  text-transform: uppercase;
+}
+.section-item-phrase{
+  margin: 0;
+  font-size: 30px;
+  line-height: 36px;
+}
+      /*спрятать заголовок*/
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.btn{
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: #626262;
+  background-color: #ffffff;
+  border: 1px solid #626262;
+  padding: 22px 35px;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 50px;
+}
