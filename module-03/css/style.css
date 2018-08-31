@@ -16,11 +16,11 @@ body{
 .wrapper{
   width: 900px;
   margin: 0 auto;
-  padding-top: 54px;
+  padding-top: 47px;
   padding-bottom: 70px;
 }
 .page-top{
-  margin-bottom: 96px;
+  margin-bottom: 40px;
 }
 .site-nav{
   list-style: none;
@@ -29,16 +29,16 @@ body{
   padding: 0px;
 }
 .site-nav a{
+  padding-bottom: 55px;
   font-size: 14px;
   color:#626262;
-  line-height: 24px;
   display: block;
   text-transform: uppercase;
   text-decoration: none;
 }
 .site-nav li{ 
 display:inline-block;
-margin-right: 77px;
+margin-right: 100px;
 }
 .site-nav li:last-child{
   margin-right: 0;
@@ -65,19 +65,30 @@ margin-right: 77px;
   width: 420px;
   display: inline-block;
   margin-right: 60px;
-  margin-bottom: 130px;
+  margin-bottom: 106px;
+}
+.section-item-image{
+  margin: 0;
+  margin-bottom: 7px;
 }
 .section-item-name{
-  margin: 0;
-  line-height: 17px;
+  font-size: 14px;
+  line-height: 19px;
   font-family: "Ubuntu";
   color: #b4ad9e;
   text-transform: uppercase;
+  margin-bottom: 18px;
 }
 .section-item-phrase{
   margin: 0;
+  margin-bottom: 30px;
   font-size: 30px;
   line-height: 36px;
+}
+.section-item-about{
+  margin: 0;
+  font-size: 14px;
+  line-height: 23px;
 }
       /*спрятать заголовок*/
 .visually-hidden:not(:focus):not(:active),
@@ -102,7 +113,7 @@ input[type="radio"].visually-hidden{
   color: #626262;
   background-color: #ffffff;
   border: 1px solid #626262;
-  padding: 22px 35px;
+  padding: 17px 38px;
   cursor: pointer;
   margin: 0 auto;
   margin-top: 50px;
