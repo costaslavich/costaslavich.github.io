@@ -14,8 +14,8 @@ body{
   line-height: 24px;
 }
 .wrapper{
-  width: 900px;
   margin: 0 auto;
+  width: 900px;
   padding-top: 47px;
   padding-bottom: 70px;
 }
@@ -23,22 +23,22 @@ body{
   margin-bottom: 40px;
 }
 .site-nav{
-  list-style: none;
   margin: 0 auto;
+  font-size: 0;
+  list-style: none;
   text-align: center;
   padding: 0px;
 }
+.site-nav li{ 
+  display:inline-block;
+  margin-right: 100px;
+  }
 .site-nav a{
-  padding-bottom: 55px;
   font-size: 14px;
   color:#626262;
   display: block;
   text-transform: uppercase;
   text-decoration: none;
-}
-.site-nav li{ 
-display:inline-block;
-margin-right: 100px;
 }
 .site-nav li:last-child{
   margin-right: 0;
@@ -69,9 +69,10 @@ margin-right: 100px;
 }
 .section-item-image{
   margin: 0;
-  margin-bottom: 7px;
+  margin-bottom: 21px;
 }
 .section-item-name{
+  margin: 0;
   font-size: 14px;
   line-height: 19px;
   font-family: "Ubuntu";
