@@ -73,18 +73,18 @@ body{
     font-family: "Roboto";
     text-align: center;
     text-transform: uppercase;
-    margin-top: 74px;
-    margin-bottom: 60px;
+    margin-top: 70px;
+    margin-bottom: 20px;
     font-size: 48px;
 }
-h3::after{
+.one-feat:after{
     content: " ";
-    color: #4ec6ab;
-    width: 136px;
-    height: 3px;
+    background: #1abc9c;
+    width: 164px;
+    height: 7px;
     display: block;
-    margin-left: 5px;
-    margin-top: 10px;
+    margin-left: 473px;
+    margin-top: 35px;
     margin-bottom: 20px;
 }
 .one-feat-item{
@@ -115,7 +115,6 @@ h3::after{
     color: #ffffff;
     padding-top: 7px;
     padding-bottom: 7px;
-    font-weight: 900px;
 }
 .one-feat-name{
     width: 201px;
@@ -158,13 +157,13 @@ h3{
     text-align: center;
     text-transform: uppercase;
 }
-h3:after{
+.two-news:after{
     content: " ";
-    color: #4ec6ab;
-    width: 136px;
-    height: 3px;
+    background: #4ec6ab;
+    width: 164px;
+    height: 7px;
     display: block;
-    margin-left: 5px;
+    margin-left: 482px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
@@ -172,7 +171,6 @@ h3:after{
     float: left;
     margin-top: 150px;
     margin-right: 30px;
-    margin-bottom: 30px;
     width: 350px;
     height: 500px;
     list-style: none;
@@ -200,11 +198,10 @@ h3:after{
 }
 .two-text:after{
     content: " ";
-    color: #4ec6ab;
+    background: #4ec6ab;
     width: 136px;
     height: 3px;
     display: block;
-    margin-left: 5px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
@@ -213,7 +210,6 @@ h3:after{
     margin: 0;
     font-size: 18px;
     color: #555252;
-    font-weight: 400px;
 }
 
 .clearfix::after{
@@ -225,11 +221,10 @@ h3:after{
     background-color: #4ec6ab;
     width: 159px;
     height: 51px;
+    cursor: pointer;
+    border-radius: 3px;
 }
 .btn{
-    cursor: pointer;
-}
-.btn-p{
     font-family: OpenSans;
     color:  #ffffff;
     font-size: 16px;
