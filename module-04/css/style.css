@@ -8,7 +8,7 @@ html{
 }
 body{
     margin: 0;
-    font-family: "Roboto", "Myriad Pro", "OpenSans", serif;
+    font-family: "Roboto", "OpenSans", serif;
     color: #515151;
     font-size: 14px;
     line-height: 26px;
@@ -47,10 +47,14 @@ body{
       margin-right: 23px;
   }
   .menu-nav-item a{ 
-      font-size: 14px;
-      color: #555252; 
-      text-transform: uppercase;
-      text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 11px;
+    text-align: right;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: OpenSans;
+    color:  #0f0101; 
   }
   .clearfix::after{
       content: "";
@@ -62,10 +66,10 @@ body{
     max-width: 100%; 
     height: auto;
   }
-  .container{
-      width: 1140px;
-      margin: 0 auto;
+  article{
+      margin: 0;
       padding: 0;
+      width: 1140px;
   }
 .one-feat{
     margin: 0 auto;
@@ -77,7 +81,7 @@ body{
     margin-bottom: 20px;
     font-size: 48px;
 }
-.one-feat:after{
+h3.one-feat:after{
     content: " ";
     background: #1abc9c;
     width: 164px;
@@ -140,15 +144,19 @@ body{
     display: table;
     clear: both;
 }
+article{
+    margin: 0;
+    padding: 0;
+    width: 1140px;
+}
 .two-news{
     margin: 0;
-    padding-left: 0;
-    width: 1140px;
-    margin-bottom: 50px;
+    padding: 0;
+    margin-top: 51px;
+    float: inherit;
 }
 h3{
     margin: 0;
-    margin-bottom: 84px;
     font-family: Roboto;
     color: #555252;
     font-size: 48px;
@@ -157,7 +165,7 @@ h3{
     text-align: center;
     text-transform: uppercase;
 }
-.two-news:after{
+h3.two-news:after{
     content: " ";
     background: #4ec6ab;
     width: 164px;
@@ -168,8 +176,9 @@ h3{
     margin-bottom: 20px;
 }
 .two-news-item{
+    margin: 0;
     float: left;
-    margin-top: 150px;
+    margin-top: 110px;
     margin-right: 30px;
     width: 350px;
     height: 500px;
@@ -188,6 +197,7 @@ h3{
     bottom: 0;
 }
 .two-text{
+    margin: 0;
     font-family: OpenSans;
     color: #555252;
     margin-top: 20px;
@@ -219,8 +229,8 @@ h3{
 }
 .btn{
     background-color: #4ec6ab;
-    width: 159px;
-    height: 51px;
+    width: 162px;
+    height: 54px;
     cursor: pointer;
     border-radius: 3px;
 }
