@@ -10,7 +10,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Roboto', 'OpenSans', serif;
+  font-family: "Roboto", "OpenSans", serif;
   color: #515151;
   font-size: 14px;
   line-height: 26px;
@@ -25,7 +25,7 @@ body {
 a.logo {
   margin: 0;
   margin-top: 16px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   float: left;
   width: 150px;
   color: #555252;
@@ -41,7 +41,7 @@ a.logo {
 }
 
 .menu-nav {
-  font-family: 'OpenSans';
+  font-family: "OpenSans";
   font-weight: bold;
 }
 
@@ -74,7 +74,7 @@ ul {
 }
 
 .clearfix::after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -93,7 +93,7 @@ img {
 .features-title {
   margin: 0 auto;
   padding: 0;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   text-align: center;
   text-transform: uppercase;
   margin-top: 88px;
@@ -101,7 +101,7 @@ img {
 }
 
 h2.features-title:after {
-  content: ' ';
+  content: " ";
   background: #1abc9c;
   width: 164px;
   height: 7px;
@@ -180,7 +180,7 @@ h2.features-title:after {
 }
 
 .clearfix::after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -208,7 +208,7 @@ h2 {
 }
 
 h2.two-news:after {
-  content: ' ';
+  content: " ";
   background: #4ec6ab;
   width: 164px;
   height: 7px;
@@ -254,7 +254,7 @@ h2.two-news:after {
 }
 
 .two-text:after {
-  content: ' ';
+  content: " ";
   background: #4ec6ab;
   width: 136px;
   height: 3px;
@@ -271,7 +271,7 @@ h2.two-news:after {
 }
 
 .clearfix::after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
