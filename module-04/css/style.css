@@ -33,7 +33,6 @@ body {
   display: block;
   font-family: 'Roboto', sans-serif;
   float: left;
-  width: 150px;
   color: #555252;
   font-size: 30px;
   line-height: 32px;
@@ -269,7 +268,6 @@ h2.two-news:after {
   height: 3px;
   display: block;
   margin-top: 9px;
-  margin-bottom: 22px;
 }
 
 .two-text-cont {
@@ -298,8 +296,7 @@ h2.two-news:after {
   border-radius: 2px;
   font-family: 'OpenSans', sans-serif;
   color: #ffffff;
-  padding-left: 46px;
-  padding-top: 12px;
+  padding: 14px 40px 40px;
   text-decoration: none;
   font-size: 16px;
   font-weight: 300;
