@@ -92,13 +92,18 @@ img {
   height: auto;
 }
 
-.features {
+.main {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.section {
   margin: 0;
   padding: 0;
   padding-bottom: 104px;
 }
 
-.features-title {
+.section-title {
   margin: 0 auto;
   padding: 0;
   font-family: 'Roboto', sans-serif;
@@ -110,7 +115,7 @@ img {
   margin-bottom: 92px;
 }
 
-h2.features-title:after {
+h2.section-title:after {
   content: ' ';
   background: #1abc9c;
   width: 164px;
@@ -194,7 +199,7 @@ h2.features-title:after {
   clear: both;
 }
 
-.news {
+.section-news {
   margin: 0;
   padding: 0;
 }
@@ -203,7 +208,7 @@ h2.features-title:after {
   margin: 0;
   padding: 0;
   float: inherit;
-  margin-bottom: 80px;
+  padding-bottom: 79px;
 }
 
 h2 {
