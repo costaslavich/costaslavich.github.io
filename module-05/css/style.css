@@ -8,41 +8,36 @@ html {
   box-sizing: inherit;
 }
 
-.page {
+body {
   margin: 0;
-  padding: 0;
   font-family: 'Roboto', 'OpenSans', sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  color: #0f0101;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
-  position: relative;
   width: 1140px;
   margin: 0 auto;
-}
-
-.page-header {
-  padding: 24px 0 15px;
-}
-
-.menu-nav {
-  font-family: 'OpenSans', sans-serif;
-  color: #0f0101;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 11px;
+  padding: 24px 0 0;
 }
 
 .logo {
-  display: block;
-  float: left;
-  font-family: 'Roboto', sans-serif;
-  padding: 10px;
-  font-size: 30px;
-  line-height: 32px;
-  color: #555252;
-  font-weight: 300;
+  display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
+  color: #555252;
+  float: left;
+  padding: 10px 0 25px 18px;
+  font-size: 30px;
+  line-height: 32px;
+  font-weight: 300;
 }
 
 .logo::first-letter {
@@ -50,17 +45,10 @@ html {
   color: #1abc9c;
 }
 
-.logo:hover {
-  background-color: #bc1abc;
-}
-
-.menu-nav {
-  float: right;
-}
-
 .site-navigation {
+  float: right;
   margin: 0;
-  padding: 8px;
+  padding: 6px;
 }
 
 .site-navigation-item {
@@ -76,86 +64,81 @@ html {
 .site-navigation-item a {
   display: block;
   font-family: 'OpenSans', sans-serif;
-  color: #0f0101;
-  padding: 10px;
-  font-size: 14px;
+  padding: 10px 0 0 19px;
   font-weight: 700;
-  line-height: 11px;
   text-transform: uppercase;
   text-decoration: none;
+  color: #1f1212;
 }
 
 .site-navigation-item a:hover,
 .site-navigation-item a:focus {
-  background-color: #bc1abc;
   color: #1abc9c;
 }
 
 .clearfix::after {
-  content: '';
   display: table;
+  content: '';
   clear: both;
 }
 
 .slider {
-  position: relative;
-  background-image: url(/module-05/img/paris_tours.jpg);
+  background-image: url(../img/paris_tours.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 145px 0px 278px;
 }
 
 .slider-btn {
-  position: absolute;
-  width: 100%;
-  top: calc(50% - 105px / 2);
-  left: 0;
+  position: relative;
+  min-height: 600px;
+  padding: 0;
 }
 
 .btn-ctrl {
   position: absolute;
+  display: inline-block;
   padding: 0;
+  width: 104px;
+  height: 104px;
   border: 0;
+  top: 46%;
+  transform: translateY(-50%);
   opacity: 0.6;
   background-color: rgba(78, 198, 171, 0.65);
   cursor: pointer;
 }
 
 .btn-ctrl-prev {
-  left: 12px;
-  top: 15px;
+  left: 0;
+  margin-left: 20px;
 }
 
 .btn-ctrl-next {
-  right: 16px;
-  top: 20px;
+  right: 0;
 }
 
 .slider-list {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 27%;
+  left: 31%;
   width: 780px;
-  margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
   text-transform: uppercase;
 }
 
 .slider-title {
-  margin-bottom: 15px;
+  margin-bottom: 48px;
   font-weight: 900;
   font-size: 60px;
 }
 
 .slider-descr {
-  margin: 0;
   font-size: 24px;
   font-weight: 300;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
 }
 
 .section {
@@ -181,14 +164,14 @@ h2.section-title:after {
   width: 164px;
   height: 8px;
   display: block;
-  margin-left: 868px;
+  margin-left: 878px;
   margin-top: 32px;
 }
 
 .section-goods {
   margin: 0 auto;
   padding: 0;
-  padding-left: 396px;
+  padding-left: 404px;
 }
 
 .section-goods-item {
