@@ -111,7 +111,12 @@ img {
   cursor: pointer;
 }
 
+.btn-ctrl-prev {
+  background-image: url(../img/left.jpg);
+}
+
 .btn-ctrl-next {
+  background-image: url(../img/right.jpg);
   right: 15px;
 }
 
@@ -123,9 +128,9 @@ img {
   position: absolute;
   margin: 0;
   padding: 0;
-  top: 53%;
+  top: 50%;
   left: 18%;
-  width: 780px;
+  width: 766px;
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
   text-transform: uppercase;
@@ -134,12 +139,15 @@ img {
 }
 
 .slider-about {
-  margin-bottom: 48px;
+  margin: 0;
+  margin-bottom: 44px;
   font-weight: 900;
   font-size: 60px;
 }
 
 .slider-descr {
+  margin: 0;
+  padding: 0;
   font-size: 24px;
   font-weight: 300;
 }
@@ -305,6 +313,10 @@ h2.section-title:after {
   text-decoration: none;
   color: #ffffff;
   padding-left: 60px;
+}
+
+li .add-card {
+  margin-right: 0;
 }
 
 .clearfix::after {
