@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>index.html</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,900"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -35,22 +36,24 @@
 
   <main class="page-main">
     <div class="slider">
-      <div class="slider-btn container">
+      <div class="slider-title container">
         <button class="btn-ctrl btn-ctrl-prev">
-          <img src="img/left.jpg" alt="left button" width="105" height="105">
-        </button>
+          <img src="img/left.jpg" alt="left button" width="105" height="105"></button>
         <button class="btn-ctrl btn-ctrl-next">
-          <img src="img/right.jpg" alt="right button" width="105" height="105">
-        </button>
-      </div>
-      <div class="slider-list">
-        <p class="slider-title">Affordable Paris Tours</p>
-        <p class="slider-descr">City Tours / Tour Tickets / Tour Guides</p>
+          <img src="img/right.jpg" alt="right button" width="105" height="105"></button>
+        <ul class="slider-list">
+          <li>
+            <p class="slider-about">Affordable Paris Tours</p>
+          </li>
+          <li>
+            <p class="slider-descr">City Tours / Tour Tickets / Tour Guides</p>
+          </li>
+        </ul>
       </div>
     </div>
 
-    <div class="container">
-      <section class="section">
+    <section class="section">
+      <div class="container">
         <h2 class="section-title">New Collection</h2>
         <ul class="section-goods clearfix">
           <li class="section-goods-item">
@@ -132,14 +135,15 @@
             </div>
           </li>
         </ul>
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
 
   <footer class="page-footer">
-    <p>All Rights Reserved © Dokan | Designed
-      <a class="footer-word" href="#">ThemenGraph</a>
-    </p>
+    <div class="container">
+      <p>All Rights Reserved © Dokan | Designed
+        <a class="footer-word" href="#">ThemenGraph</a></p>
+    </div>
   </footer>
 </body>
 
