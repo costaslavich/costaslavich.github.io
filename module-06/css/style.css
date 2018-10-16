@@ -34,27 +34,33 @@ img {
 }
 
 .logo {
+  display: block;
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   line-height: 36px;
   color: #95e1d3;
   font-weight: bold;
 }
 
-.mastnav ul {
+.mastnav-item {
   margin: 0;
   padding: 0;
-  padding-top: 22px;
   display: flex;
   justify-content: space-between;
   width: 491px;
   list-style-type: none;
 }
 
-.mastnav-item li a {
+.mastnav-item-head a {
+  margin: 0;
+  padding: 0;
+  display: block;
   font-size: 14px;
   line-height: 17px;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
+  text-align: center;
   color: #9ce3d6;
   text-decoration: none;
   transition: color 200ms linear;
@@ -70,33 +76,33 @@ img {
   transition: width 200ms linear;
 }
 
-.mastnav-item li a:hover,
-.mastnav-item li a:focus {
+.mastnav-item-head a:hover,
+.mastnav-item-head a:focus {
   color: #f38181;
 }
 
-.mastnav-item li a:hover::after,
-.mastnav-item li a:focus::after {
+.mastnav-item-head a:hover::after,
+.mastnav-item-head a:focus::after {
   width: 100%;
 }
 
 .services {
   margin: 0 auto;
   padding: 0 10px;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 
 .headline {
   width: 381px;
   text-align: center;
   margin-left: 411px;
-  margin-bottom: 50px;
+  margin-bottom: 64px;
 }
 
 .we-work {
   margin: 0 auto;
   padding: 0;
-  font-family: 'KaushanScript', 'sans-serif';
+  font-family: 'KaushanScript', sans-serif;
   font-size: 24px;
   line-height: 29px;
   color: #333333;
@@ -106,7 +112,7 @@ img {
 .amazing-services {
   margin: 0 auto;
   padding: 0;
-  font-family: 'Montserrat', 'sans serif';
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
@@ -136,7 +142,7 @@ img {
   flex-basis: calc(33.333% - 8px);
   flex-grow: 0;
   padding-left: 83px;
-  margin-bottom: 52px;
+  margin-bottom: 95px;
 }
 
 .services-item-work:nth-child(n + 3) {
@@ -151,14 +157,25 @@ img {
   background-repeat: no-repeat;
   position: absolute;
   left: 21px;
-  top: 16px;
 }
 
 .services-item-work h3 {
-  font-family: 'Montserrat', 'sans serif';
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.services-item-work p {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(153, 153, 153);
+  line-height: 1.6;
 }
 
 .icon-alarm::before {
@@ -194,12 +211,13 @@ img {
   margin: 0 auto;
   width: 980px;
   text-align: center;
-  margin-left: 462px;
-  margin-bottom: 98px;
+  margin-bottom: 90px;
 }
 
 .who-we-are {
-  font-family: 'KaushanScript', 'sans-serif';
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'KaushanScript';
   font-size: 24px;
   line-height: 29px;
   margin-bottom: 11px;
@@ -212,7 +230,16 @@ img {
   font-size: 30px;
   line-height: 36px;
   font-weight: bold;
-  margin-bottom: 43px;
+  margin-bottom: 38px;
+}
+
+.our-team-descr {
+  margin: 0;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(153, 153, 153);
+  line-height: 1.6;
+  text-align: center;
 }
 
 .meet-our-team:after {
@@ -265,14 +292,14 @@ img {
   line-height: 24px;
 }
 
-.wrapper {
+.icons-on-top {
   width: 380px;
   height: 470px;
   top: 0;
   left: 0;
   background-image: linear-gradient(
-    0,
-    rgb(252, 227, 138) 10%,
+    90deg,
+    rgb(252, 227, 138) 0%,
     rgb(243, 129, 129) 100%
   );
   position: absolute;
@@ -297,9 +324,9 @@ img {
   z-index: 15;
 }
 
-.our-team-image:hover .wrapper {
+.our-team-image:hover .icons-on-top {
   transform: translate(-10px, -10px);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .social {
@@ -362,13 +389,16 @@ img {
 }
 
 .template {
+  margin: 0;
+  padding-top: 12px;
   font-size: 14px;
   line-height: 17px;
-  font-weight: 400px;
+  color: rgb(51, 51, 51);
   font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
 }
 
-.footer-word {
+.template:hover .footer-word {
   color: #f38181;
 }
 
@@ -377,6 +407,7 @@ img {
   width: 380px;
   display: flex;
   border: 1px solid #e7e7e7;
+  cursor: pointer;
 }
 
 .button-mail {
@@ -390,6 +421,7 @@ img {
 }
 
 .button-text {
+  margin: 0;
   width: 150px;
   text-align: center;
   font-size: 14px;
