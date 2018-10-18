@@ -113,6 +113,7 @@ img {
   margin: 0 auto;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
@@ -308,7 +309,7 @@ img {
   transition: transform 200ms linear;
 }
 
-.substrate {
+/*.substrate {
   position: absolute;
   width: 380px;
   height: 470px;
@@ -317,11 +318,12 @@ img {
   background-color: #9ce3d6;
   opacity: 1;
   z-index: -10;
-}
+}*/
 
 .our-team-image:hover .image {
   transform: translate(-10px, -10px);
-  z-index: 15;
+  box-shadow: 10px 10px 0 rgba(149, 225, 211, 1);
+  opacity: 1;
 }
 
 .our-team-image:hover .icons-on-top {
