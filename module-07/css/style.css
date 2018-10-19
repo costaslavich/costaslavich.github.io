@@ -1,0 +1,318 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 940px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 105px;
+}
+
+.logo {
+  font-size: 26px;
+  line-height: 1.577;
+  font-family: 'Charmonman';
+  color: #222222;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: #fed136;
+}
+
+.navigation-head {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 484px;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 2.929;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+.navigation-head-items a {
+  color: #222222;
+  text-decoration: none;
+  align-items: flex-end;
+}
+
+.navigation-head-items a:hover {
+  color: #fed136;
+}
+
+.services {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.services-title {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(34, 34, 34);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.services-subtitle {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Cedarville Cursive';
+  color: rgb(119, 119, 119);
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.services-items {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 232px;
+  list-style-type: none;
+  margin-bottom: 115px;
+}
+
+.services-items-title {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(34, 34, 34);
+  font-weight: bold;
+  line-height: 75px;
+  text-align: center;
+}
+
+.services-items .descr {
+  font-size: 14px;
+  font-family: 'Roboto-Slab', sans-serif;
+  color: rgb(119, 119, 119);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.services-items-icons {
+  position: relative;
+}
+
+.services-items-icons a {
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: absolute;
+  top: -54%;
+  left: 38%;
+  width: 70px;
+  height: 70px;
+  border: 3px solid rgb(254, 209, 54);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-basket a {
+  background-image: url(../img/Icon-Basket.png);
+}
+
+.icon-laptop a {
+  background-image: url(../img/Icon-Laptop.png);
+}
+
+.icon-locked a {
+  background-image: url(../img/Icon-Locked.png);
+}
+
+.form {
+  background-color: rgb(34, 34, 34);
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.background-picture {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  opacity: 0.302;
+  transform: translateX(100%);
+}
+
+.contact-us {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom: 76px;
+}
+
+.contact-us-title {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  line-height: 48px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 12px;
+}
+
+.contact-us-subtitle {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: 'Cedarville Cursive';
+  color: rgb(119, 119, 119);
+  font-style: italic;
+}
+
+.signup-form {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.section {
+  width: 455px;
+}
+
+.info {
+  margin: 0;
+  padding: 0;
+}
+
+.info input {
+  width: 100%;
+  padding: 17px 0;
+  padding-left: 14px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 2px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(187, 187, 187);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.info li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.info input:valid {
+  border-color: aquamarine;
+}
+
+.info input:invalid {
+  border-color: red;
+}
+
+.section textarea {
+  width: 100%;
+  resize: none;
+  padding-top: 16px;
+  padding-bottom: 34px;
+  padding-left: 15px;
+  margin-left: 30px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(187, 187, 187);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.section textarea:valid {
+  border-color: aquamarine;
+}
+
+.section textarea:invalid {
+  border-color: red;
+}
+
+.section li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.action {
+  margin: 0 auto;
+}
+
+.button {
+  margin-top: 26px;
+  margin-bottom: 112px;
+  padding: 20px 46px;
+  font-size: 18px;
+  border: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(187, 187, 187);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(254, 209, 54);
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
