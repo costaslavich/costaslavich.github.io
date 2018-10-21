@@ -11,8 +11,8 @@
 </head>
 
 <body>
-  <header class="container">
-    <nav class="navigation">
+  <header>
+    <nav class="navigation container">
       <a href="#" class="logo">Golden</a>
       <ul class="navigation-head">
         <li class="navigation-head-items"><a href="#">Home</a></li>
@@ -26,32 +26,29 @@
 </body>
 <main>
 
-  <section class="container">
+  <section class="mast-section">
     <header class="services">
-      <h1 class="services-title">Services</h1>
+      <h2 class="services-title">Services</h2>
       <p class="services-subtitle">Proin iaculis purus consequat sem cure.</p>
     </header>
 
-    <ul class="services-items">
+    <ul class="services-items container">
       <li class="services-items-icons icon-basket">
-        <a href="#">
-          <span class="visually-hidden">Icon-basket</span></a>
+        <span class="visually-hidden">Icon-basket</span>
         <h3 class="services-items-title">E-Commerce</h3>
         <p class="services-items-title descr">Proin iaculis purus consequat sem cure.
           Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
       </li>
 
       <li class="services-items-icons icon-laptop">
-        <a href="#">
-          <span class="visually-hidden">Icon-laptop</span></a>
+        <span class="visually-hidden">Icon-laptop</span>
         <h3 class="services-items-title">Responsive Web</h3>
         <p class="services-items-title descr">Proin iaculis purus consequat sem cure.
           Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
       </li>
 
       <li class="services-items-icons icon-locked">
-        <a href="#">
-          <span class="visually-hidden">Icon-locked</span></a>
+        <span class="visually-hidden">Icon-locked</span>
         <h3 class="services-items-title">Web security</h3>
         <p class="services-items-title subt descr">Proin iaculis purus consequat
           sem cure. Donec porttitora entum suscipit aenean rhoncus posuere odio in
@@ -63,28 +60,25 @@
   </section>
   <section class="form">
     <div class="container">
-      <!--<img src="img/Map-Image.png" alt="Map image" class="background-picture" width="614"
-        height="537">-->
-      <img src="img/Map Image.jpg" alt="Map image" class="background-picture" width="614"
-        height="537">
       <header class="contact-us">
         <h2 class="contact-us-title">Contact Us</h2>
         <p class="contact-us-subtitle">Proin iaculis purus consequat sem cure.</p>
       </header>
       <form class="signup-form">
-        <section role="group" class="section">
-          <ul class="info">
-            <li><input type="text" name="name" placeholder="your name *" autofocus
-                required></li>
-            <li><input type="email" name="email" placeholder="your e-mail *" required></li>
-            <li><input type="subject" name="subject" placeholder="subject"></li>
-          </ul>
-        </section>
+        <div class="information">
+          <div role="group" class="group-section">
+            <ul class="info">
+              <li><input type="text" name="name" placeholder="your name *" autofocus
+                  required></li>
+              <li><input type="email" name="email" placeholder="your e-mail *" required></li>
+              <li><input type="subject" name="subject" placeholder="subject"></li>
+            </ul>
+          </div>
 
-        <section role="group" class="section">
-          <textarea name="message" cols="30" rows="10" placeholder="your message *" required></textarea>
-        </section>
-
+          <div role="group" class="section">
+            <textarea name="message" cols="30" rows="10" placeholder="your message *" required></textarea>
+          </div>
+        </div>
         <section class="action">
           <button type="submit" class="button">Send message</button>
         </section>

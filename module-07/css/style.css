@@ -25,25 +25,24 @@ img {
   width: 940px;
 }
 
+header {
+  padding-top: 40px;
+  margin-bottom: 100px;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px;
-  margin-bottom: 105px;
 }
 
 .logo {
   font-size: 26px;
   line-height: 1.577;
   font-family: 'Charmonman';
-  color: #222222;
+  color: #fed136;
   text-decoration: none;
   cursor: pointer;
-}
-
-.logo:hover {
-  color: #fed136;
 }
 
 .navigation-head {
@@ -60,6 +59,7 @@ img {
 }
 
 .navigation-head-items a {
+  display: block;
   color: #222222;
   text-decoration: none;
   align-items: flex-end;
@@ -67,6 +67,12 @@ img {
 
 .navigation-head-items a:hover {
   color: #fed136;
+}
+
+.mast-section {
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 116px;
 }
 
 .services {
@@ -105,7 +111,6 @@ img {
   align-items: flex-end;
   height: 232px;
   list-style-type: none;
-  margin-bottom: 115px;
 }
 
 .services-items-title {
@@ -129,13 +134,15 @@ img {
 
 .services-items-icons {
   position: relative;
-}
-
-.services-items-icons a {
   margin: 0;
   padding: 0;
-  display: block;
+  flex: 0 0 280px;
+}
+
+.services-items li::before {
   position: absolute;
+  content: '';
+  display: block;
   top: -54%;
   left: 38%;
   width: 70px;
@@ -146,31 +153,22 @@ img {
   background-position: center;
 }
 
-.icon-basket a {
+.icon-basket::before {
   background-image: url(../img/Icon-Basket.png);
 }
 
-.icon-laptop a {
+.icon-laptop::before {
   background-image: url(../img/Icon-Laptop.png);
 }
 
-.icon-locked a {
+.icon-locked::before {
   background-image: url(../img/Icon-Locked.png);
 }
 
 .form {
-  background-color: rgb(34, 34, 34);
+  background-image: url(../img/Background.png);
   margin: 0;
   padding: 0;
-  position: relative;
-}
-
-.background-picture {
-  position: absolute;
-  top: 0;
-  right: 50%;
-  opacity: 0.302;
-  transform: translateX(100%);
 }
 
 .contact-us {
@@ -190,7 +188,7 @@ img {
   color: rgb(255, 255, 255);
   font-weight: bold;
   text-transform: uppercase;
-  padding-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .contact-us-subtitle {
@@ -203,20 +201,22 @@ img {
   font-style: italic;
 }
 
-.signup-form {
+.information {
   display: flex;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
-}
-
-.section {
-  width: 455px;
+  justify-content: space-between;
 }
 
 .info {
   margin: 0;
   padding: 0;
+}
+
+.group-section {
+  margin: 0;
+  padding: 0;
+  width: 455px;
 }
 
 .info input {
@@ -246,7 +246,7 @@ img {
 }
 
 .section textarea {
-  width: 100%;
+  width: 455px;
   resize: none;
   padding-top: 16px;
   padding-bottom: 34px;
@@ -281,8 +281,10 @@ img {
 }
 
 .button {
+  margin: 0 auto;
+  padding: 0;
+  display: block;
   margin-top: 26px;
-  margin-bottom: 112px;
   padding: 20px 46px;
   font-size: 18px;
   border: 0;
