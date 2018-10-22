@@ -37,6 +37,7 @@ header {
 }
 
 .logo {
+  display: block;
   font-size: 26px;
   line-height: 1.577;
   font-family: 'Charmonman';
@@ -169,6 +170,7 @@ header {
   background-image: url(../img/Background.png);
   margin: 0;
   padding: 0;
+  padding-bottom: 118px;
 }
 
 .contact-us {
@@ -274,10 +276,6 @@ header {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.action {
-  margin: 0 auto;
 }
 
 .button {
