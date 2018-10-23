@@ -80,7 +80,7 @@ header {
   margin: 0;
   padding: 0;
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 74px;
 }
 
 .services-title {
@@ -110,7 +110,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  height: 232px;
   list-style-type: none;
 }
 
@@ -141,11 +140,9 @@ header {
 }
 
 .services-items li::before {
-  position: absolute;
   content: '';
   display: block;
-  top: -54%;
-  left: 38%;
+  margin: 0 auto;
   width: 70px;
   height: 70px;
   border: 3px solid rgb(254, 209, 54);
@@ -171,6 +168,7 @@ header {
   margin: 0;
   padding: 0;
   padding-bottom: 118px;
+  position: relative;
 }
 
 .contact-us {
@@ -201,6 +199,14 @@ header {
   font-family: 'Cedarville Cursive';
   color: rgb(119, 119, 119);
   font-style: italic;
+}
+
+.image-map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.302;
+  transform: translate(-42%, 22%);
 }
 
 .information {
@@ -302,7 +308,7 @@ header {
   background-color: rgb(254, 209, 54);
 }
 
-.visually-hidden:not(:focus):not(:active),
+/*.visually-hidden:not(:focus):not(:active),
 input[type='checkbox'].visually-hidden,
 input[type='radio'].visually-hidden {
   position: absolute;
@@ -315,4 +321,4 @@ input[type='radio'].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
+}*/
