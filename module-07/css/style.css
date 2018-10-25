@@ -165,10 +165,7 @@ header {
 
 .form {
   background-image: url(../img/Background.png);
-  margin: 0;
-  padding: 0;
   padding-bottom: 118px;
-  position: relative;
 }
 
 .contact-us {
@@ -201,14 +198,6 @@ header {
   font-style: italic;
 }
 
-.image-map {
-  position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 0.302;
-  transform: translate(-42%, 22%);
-}
-
 .information {
   display: flex;
   margin: 0;
@@ -219,6 +208,7 @@ header {
 .info {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .group-section {
@@ -253,7 +243,7 @@ header {
   border-color: red;
 }
 
-.section textarea {
+.textarea {
   width: 455px;
   resize: none;
   padding-top: 16px;
@@ -307,18 +297,3 @@ header {
   color: rgb(255, 255, 255);
   background-color: rgb(254, 209, 54);
 }
-
-/*.visually-hidden:not(:focus):not(:active),
-input[type='checkbox'].visually-hidden,
-input[type='radio'].visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}*/
