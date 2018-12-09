@@ -5,24 +5,21 @@ const ADMIN_PASSWORD = 'm4ng0h4ckz';
 let message = ' ';
 
 let userLogin = prompt('Введите Login');
-let userPassword = prompt('Введите Password');
 
 if (!userLogin) {
-  message = 'Отменено пользователем!';
+  message = 'Пользователь нажал отмена Login!';
 } else if (userLogin !== ADMIN_LOGIN) {
   message = 'Доступ запрещен, неверный логин!';
 } else {
   message = 'Login верный!';
+  let userPassword = prompt('Введите Password');
+  if (!userPassword) {
+    message = 'Пользователь нажал отмена Password!';
+  } else if (userPassword !== ADMIN_PASSWORD) {
+    message = 'Доступ запрещен, неверный пароль!';
+  } else {
+    message = alert('Вы ввели верные данные');
+    message = 'Добро пожаловать!';
+  }
 }
-console.log(message);
-
-if (!userPassword) {
-  message = 'Отменено пользователем!';
-} else if (userPassword !== ADMIN_PASSWORD) {
-  message = 'Доступ запрещен, неверный пароль!';
-} else {
-  message = 'Добро пожэаловать!';
-}
-
-alert('Сообщение от пользователя с правами админа: ', message);
 console.log(message);
