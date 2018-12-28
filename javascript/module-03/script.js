@@ -13,14 +13,16 @@ const isLoginValid = function(login) {
   if (login.length < 4 || login.length > 16) {
     console.log(MESSAGE_INVALID);
     return false;
-  } else return true;
+  }
+  return true;
 };
 
 const isLoginUnique = function(allLogins, login) {
   if (logins.includes(login)) {
     console.log(MESSAGE_LOGIN_FALSE);
     return false;
-  } else return true;
+  }
+  return true;
 };
 
 const addLogin = function(allLogins, login) {
