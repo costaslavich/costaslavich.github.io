@@ -87,67 +87,75 @@ const users = [
   },
 ];
 
-//const getAllNames = users => users.map(user => user.name);
+const getAllNames = users => users.map(user => user.name);
 
-//console.log(getAllNames(users));
-// [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
+console.log(getAllNames(users));
+[
+  'Moore Hensley',
+  'Sharlene Bush',
+  'Ross Vazquez',
+  'Elma Head',
+  'Carey Barr',
+  'Blackburn Dotson',
+  'Sheree Anthony',
+];
 
-// const getUsersByEyeColor = (users, color) =>
-//   users.filter(user => {
-//     if (user.eyeColor === color) {
-//       return user;
-//     }
-//   });
+const getUsersByEyeColor = (users, color) =>
+  users.filter(user => {
+    if (user.eyeColor === color) {
+      return user;
+    }
+  });
 
-//console.log(getUsersByEyeColor(users, 'blue'));
-// [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
+console.log(getUsersByEyeColor(users, 'blue'));
+//[объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
 
-// const getUsersByGender = (users, gender) =>
-//   users
-//     .filter(user => {
-//       if (user.gender === gender) {
-//         return user.name;
-//       }
-//     })
-//     .map(user => user.name);
+const getUsersByGender = (users, gender) =>
+  users
+    .filter(user => {
+      if (user.gender === gender) {
+        return user.name;
+      }
+    })
+    .map(user => user.name);
 
-// console.log(getUsersByGender(users, 'male'));
-// [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+console.log(getUsersByGender(users, 'male'));
+//['Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson'];
 
-// const getInactiveUsers = users => users.filter(user => !user.isActive);
+const getInactiveUsers = users => users.filter(user => !user.isActive);
 
-// console.log(getInactiveUsers(users));
-// [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
+console.log(getInactiveUsers(users));
+//[объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
 
-// const getUserByEmail = (users, email) =>
-//   users.find(user => user.email === email);
+const getUserByEmail = (users, email) =>
+  users.find(user => user.email === email);
 
-// console.log(getUserByEmail(users, 'shereeanthony@kog.com'));
-// {объект пользователя Sheree Anthony}
+console.log(getUserByEmail(users, 'shereeanthony@kog.com'));
+//{объект пользователя Sheree Anthony}
 
-//console.log(getUserByEmail(users, 'elmahead@omatom.com'));
-// {объект пользователя Elma Head}
+console.log(getUserByEmail(users, 'elmahead@omatom.com'));
+//{объект пользователя Elma Head}
 
-// const getUsersWithAge = (users, min, max) =>
-//   users.filter(user => user.age >= min && user.age <= max);
+const getUsersWithAge = (users, min, max) =>
+  //   users.filter(user => user.age >= min && user.age <= max);
 
-//console.log(getUsersWithAge(users, 20, 30));
-// [объект Ross Vazquez, объект Elma Head, объект Carey Barr]
-// [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
+  console.log(getUsersWithAge(users, 20, 30));
+//[объект Ross Vazquez, объект Elma Head, объект Carey Barr]
+//[объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
 
-// const getTotalBalance = users =>
-//   users.reduce((acc, user) => {
-//     acc += user.balance;
+const getTotalBalance = users =>
+  users.reduce((acc, user) => {
+    acc += user.balance;
 
-//     return acc;
-//   }, 0);
+    return acc;
+  }, 0);
 
-// console.log(getTotalBalance(users)); // 20916
+console.log(getTotalBalance(users)); // 20916
 
-// const getUsersByFriend = (users, name) =>
-//   users.filter(user => user.friends.includes(name)).map(user => user.name);
+const getUsersByFriend = (users, name) =>
+  users.filter(user => user.friends.includes(name)).map(user => user.name);
 
-//console.log(getUsersByFriend(users, 'Briana Decker'));
-// [ 'Sharlene Bush', 'Sheree Anthony' ]
-//console.log(getUsersByFriend(users, 'Goldie Gentry'));
-// [ 'Elma Head', 'Sheree Anthony' ]
+console.log(getUsersByFriend(users, 'Briana Decker'));
+['Sharlene Bush', 'Sheree Anthony'];
+console.log(getUsersByFriend(users, 'Goldie Gentry'));
+['Elma Head', 'Sheree Anthony'];
