@@ -151,7 +151,7 @@ const createListItem = ({ id, title, body, priority }) => {
   const notice = document.createElement('div');
   notice.classList.add('note');
 
-  notice.append(createNoteContent(), createNoteFooter());
+  notice.append(createNoteContent(title, body), createNoteFooter());
   listItem.appendChild(notice);
 
   return listItem;
@@ -167,26 +167,26 @@ const createNoteContent = (title, body) => {
 
   const noteBody = document.createElement('p');
   noteBody.classList.add('note_body');
-  noteBody.textContent = title;
+  noteBody.textContent = body;
   noteContent.append(noteTitle, noteBody);
 
   return noteContent;
 };
 
-const createNoteFooter = note => {
+const createNoteFooter = priority => {
   const noteFooter = document.createElement('footer');
   noteFooter.classList.add('note_footer');
 
-  createNotePriority(note);
+  createNotePriority(priority);
 
-  createNoteAction(note);
+  createNoteAction();
 
   noteFooter.append(createNotePriority(), createNoteAction());
 
   return noteFooter;
 };
 
-const createNotePriority = priority => {
+const createNotePriority = () => {
   const noteSectionPriority = document.createElement('section');
   noteSectionPriority.classList.add('note_section');
 
@@ -195,7 +195,7 @@ const createNotePriority = priority => {
   buttonDecrease.dataset.action = NOTE_ACTIONS.DECREASE_PRIORITY;
 
   const iconDecrease = document.createElement('i');
-  iconDecrease.classList.add('material-iconsaction__icon');
+  iconDecrease.classList.add('material-icons');
   iconDecrease.classList.add('action__icon');
   iconDecrease.textContent = ICON_TYPES.ARROW_DOWN;
   buttonDecrease.appendChild(iconDecrease);
@@ -205,7 +205,7 @@ const createNotePriority = priority => {
   buttonIncrease.dataset.action = NOTE_ACTIONS.INCREASE_PRIORITY;
 
   const iconIncrease = document.createElement('i');
-  iconIncrease.classList.add('material-iconsaction__icon');
+  iconIncrease.classList.add('material-icons');
   iconIncrease.classList.add('action__icon');
   iconIncrease.textContent = ICON_TYPES.ARROW_UP;
   buttonIncrease.appendChild(iconIncrease);
@@ -257,3 +257,5 @@ const renderNoteList = (listRef, notes) => {
 };
 
 renderNoteList(list, notepad.notes);
+
+//console.log();
