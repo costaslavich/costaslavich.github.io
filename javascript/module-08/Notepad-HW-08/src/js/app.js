@@ -20,6 +20,11 @@ const NOTE_ACTIONS = {
   DECREASE_PRIORITY: 'decrease-priority',
 };
 
+const refs = {
+  list: document.querySelector('.note-list'),
+  editor: document.querySelector('.note-editor'),
+};
+
 const initialNotes = [
   {
     id: 1,
@@ -141,17 +146,34 @@ Notepad.PRIORITIES = {
   2: { id: 2, value: 2, name: 'High' },
 };
 
+const generateUniqueId = () =>
+  Math.random()
+    .toString(36)
+    .substring(2, 15) +
+  Math.random()
+    .toString(36)
+    .substring(2, 15);
+
 const notepad = new Notepad(initialNotes);
+
+const handleEditorSubmit = event => {
+  event.preventDefault();
+
+  const [inputFields] = event.target.elements;
+  console.log(inputFields);
+};
+
+refs.editor.addEventListener('submit', handleEditorSubmit);
 
 const createListItem = ({ id, title, body, priority }) => {
   const listItem = document.createElement('li');
-  listItem.classList.add('note-list_item');
+  listItem.classList.add('note-list__item');
   listItem.dataset.id = id;
 
   const notice = document.createElement('div');
   notice.classList.add('note');
 
-  notice.append(createNoteContent(title, body), createNoteFooter());
+  notice.append(createNoteContent(title, body), createNoteFooter(priority));
   listItem.appendChild(notice);
 
   return listItem;
@@ -159,14 +181,14 @@ const createListItem = ({ id, title, body, priority }) => {
 
 const createNoteContent = (title, body) => {
   const noteContent = document.createElement('div');
-  noteContent.classList.add('note_content');
+  noteContent.classList.add('note__content');
 
   const noteTitle = document.createElement('h2');
-  noteTitle.classList.add('note_title');
+  noteTitle.classList.add('note__title');
   noteTitle.textContent = title;
 
   const noteBody = document.createElement('p');
-  noteBody.classList.add('note_body');
+  noteBody.classList.add('note__body');
   noteBody.textContent = body;
   noteContent.append(noteTitle, noteBody);
 
@@ -175,18 +197,14 @@ const createNoteContent = (title, body) => {
 
 const createNoteFooter = priority => {
   const noteFooter = document.createElement('footer');
-  noteFooter.classList.add('note_footer');
+  noteFooter.classList.add('note__footer');
 
-  createNotePriority(priority);
-
-  createNoteAction();
-
-  noteFooter.append(createNotePriority(), createNoteAction());
+  noteFooter.append(createNotePriority(priority), createNoteAction());
 
   return noteFooter;
 };
 
-const createNotePriority = () => {
+const createNotePriority = priority => {
   const noteSectionPriority = document.createElement('section');
   noteSectionPriority.classList.add('note_section');
 
@@ -212,7 +230,7 @@ const createNotePriority = () => {
 
   const notePriority = document.createElement('span');
   notePriority.classList.add('note__priority');
-  notePriority.textContent = Notepad.getPriorityName(notepad.priority);
+  notePriority.textContent = 'Priority: ' + Notepad.getPriorityName(priority);
 
   noteSectionPriority.append(buttonDecrease, buttonIncrease, notePriority);
 
@@ -248,14 +266,10 @@ const createNoteAction = () => {
   return noteSectionAction;
 };
 
-const list = document.querySelector('.note-list');
-
 const renderNoteList = (listRef, notes) => {
   const listItems = notes.map(item => createListItem(item));
 
   listRef.append(...listItems);
 };
 
-renderNoteList(list, notepad.notes);
-
-//console.log();
+renderNoteList(refs.list, notepad.notes);
