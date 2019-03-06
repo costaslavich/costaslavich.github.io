@@ -64,7 +64,7 @@ const initialNotes = [
 
 class Notepad {
   static getPriorityName(priorityId) {
-    return Notepad.PRIORITIES[priorityId];
+    return Notepad.PRIORITIES[priorityId].name;
   }
 
   static generateUniqueId = () =>
@@ -222,7 +222,7 @@ const createNotePriority = priority => {
 
   const notePriority = document.createElement('span');
   notePriority.classList.add('note__priority');
-  notePriority.textContent = 'Priority: ' + Notepad.getPriorityName(priority);
+  notePriority.textContent = `Priority: ${Notepad.getPriorityName(priority)}`;
 
   noteSectionPriority.append(buttonDecrease, buttonIncrease, notePriority);
 
