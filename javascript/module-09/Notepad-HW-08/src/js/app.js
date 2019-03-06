@@ -94,7 +94,7 @@ class Notepad {
       id: Notepad.generateUniqueId(),
       title: headline,
       body: text,
-      priority: Notepad.PRIORITIES,
+      priority: PRIORITY_TYPES.LOW,
     };
 
     this.notes.push(newItem);
