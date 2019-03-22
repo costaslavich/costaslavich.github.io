@@ -1,4 +1,3 @@
-import { PRIORITY_TYPES, PRIORITIES } from './constants';
 const shortid = require('shortid');
 
 export default class Notepad {
@@ -25,7 +24,7 @@ export default class Notepad {
       id: shortid.generate(),
       title: headline,
       body: text,
-      priority: PRIORITY_TYPES.LOW,
+      priority: Notepad.getPriorityName(0),
     };
 
     this.notes.push(newItem);
@@ -78,3 +77,9 @@ export default class Notepad {
     return newArrayNotesByPriority;
   }
 }
+
+Notepad.PRIORITIES = {
+  0: { id: 0, value: 0, name: 'Low' },
+  1: { id: 1, value: 1, name: 'Normal' },
+  2: { id: 2, value: 2, name: 'High' },
+};

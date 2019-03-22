@@ -1,33 +1,34 @@
 import Notyf from 'notyf';
 import Micromodal from 'micromodal';
 import productTemplate from '../templates/notes.hbs';
-import { ICON_TYPES, NOTIFICATION_MESSAGES, refs } from './utils/constants';
+import { ICON_TYPES, NOTIFICATION_MESSAGES } from './utils/constants';
 import Notepad from './utils/notepad-model';
 import initialNotes from '../assets/notes.json';
 import {
+  refs,
   renderNoteList,
   addItemToList,
-  removeListItem,
   findParentListItem,
+  removeListItem,
 } from './utils/view';
 import '../sass/libs/micromodal.scss';
 import 'notyf/dist/notyf.min.css';
 
-// const initialNotesCopyPriority = initialNotes.map(note=>{
-// note.priority = Notepad.getPriorityName();
-// })
+const initialNotesCopyPriority = initialNotes.map(
+  note => ((note.priority = Notepad.getPriorityName(note.priority)), note),
+);
 
 const createNoteMarkup = notes => {
-  const markup = notes.map(note => productTemplate(note)).join('');
+  const markup = notes.map(note => productTemplate(note));
 
   return markup;
 };
 
-const markup = createNoteMarkup(initialNotes);
+const markup = createNoteMarkup(initialNotesCopyPriority);
 
 refs.list.insertAdjacentHTML('beforeend', markup);
 
-const notepad = new Notepad(initialNotes);
+const notepad = new Notepad(initialNotesCopyPriority);
 const notyf = new Notyf();
 
 //  HANDLERS
@@ -44,9 +45,11 @@ const handleEditorSubmit = event => {
     return notyf.alert(NOTIFICATION_MESSAGES.EDITOR_FIELDS_EMPTY);
   }
 
-  const saveItem = notepad.saveNote(inputValue, textareaValue);
+  const newSaveItem = notepad.saveNote(inputValue, textareaValue);
 
-  addItemToList(refs.list, saveItem);
+  addItemToList(refs.list, newSaveItem);
+
+  console.log(newSaveItem);
 
   notyf.confirm(NOTIFICATION_MESSAGES.NOTE_ADDED_SUCCESS);
   Micromodal.close('note-editor-modal');
@@ -54,10 +57,10 @@ const handleEditorSubmit = event => {
   event.currentTarget.reset();
 };
 
-const handleFilterChange = event => {
-  const filteredItems = notepad.filterNotesByQuery(event.target.value);
+const handleFilterChange = ({ target }) => {
+  const filteredItems = notepad.filterNotesByQuery(target.value);
 
-  renderNoteList(refs.list, filteredItems);
+  renderNoteList(refs.list, filteredItems.map(note => productTemplate(note)));
 };
 
 const handleListClick = ({ target }) => {
@@ -65,7 +68,6 @@ const handleListClick = ({ target }) => {
 
   const actionIcon = target.textContent;
 
-  console.log(actionIcon);
   switch (actionIcon) {
     case ICON_TYPES.DELETE:
       console.log('DElETE !!!');
@@ -90,7 +92,7 @@ const handleListClick = ({ target }) => {
       break;
 
     default:
-    // console.log('invalid action !!!');
+      console.log('Not a BUTTON !!!');
   }
 };
 
@@ -98,7 +100,10 @@ const handleOpenModal = () => {
   Micromodal.show('note-editor-modal');
 };
 
-//renderNoteList(refs.list, notepad.notes);
+renderNoteList(
+  refs.list,
+  initialNotesCopyPriority.map(note => productTemplate(note)),
+);
 
 //  LISTENERS
 
